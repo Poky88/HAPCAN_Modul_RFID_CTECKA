@@ -29,12 +29,18 @@ Kompletní Firmware byl vyvinut v prostředí Arduino IDE a dělí se na dvě č
 
 Obsluha čtečky
 
+<p align="center">
+  <img width="50%" alt="Hapcan_NFC-vývojový diagram drawio" src="https://github.com/user-attachments/assets/8f330b48-8d9e-4592-b60a-06143c630d38" />
+  <br>
+  <i>Obr. 1: Modul - 3D model</i>
+</p>
+
 Obsluha protokolu HAPCAN
 
-
-
 <p align="center">
-  <img width="80%" src="https://github.com/user-attachments/files/26648070/HapcanProtocol-vyvojovy.diagram.pdf" alt="Náhled" />
+  <img width="50%" alt="HapcanProtocol-vývojový diagram drawio (1)" src="https://github.com/user-attachments/assets/16f24a4d-6b0b-4fc2-9c68-fbed4c1e641f" />
+  <br>
+  <i>Obr. 1: Modul - 3D model</i>
 </p>
 
 
