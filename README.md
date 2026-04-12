@@ -76,15 +76,13 @@ Hardware/
     ├── Modul - DPS.kicad_pcb
     ├── Modul - DPS.kicad_pro
     └── Modul - DPS.kicad_sch
-
 Software/
 └── Arduino IDE 2.3.8/           # Zdrojové soubory firmwaru
-    ├── HAPCAN.ide
-    ├── 1kod.g
-    ├── 1kod.g
-    ├── 1kod.g
-    ├── 1kod.g
-    └── 1kod.g
+    ├── HAPCAN.ino
+    ├── HAPCAN_NFC.cpp
+    ├── HAPCAN_NFC.h
+    ├── HAPCANProtocol.cpp
+    └── HAPCANProtocol.h
 3D tisk/
 └── Inventor 2026/               # 3D model ochranného krytu
     ├── Kryt - horní díl.ipt
