@@ -73,6 +73,7 @@ připojení ke sběrnici CAN a propojení s Button modulem.
 <pre>
 Hardware/
 └── KiCad 9.0/                   # Projekty návrhu DPS
+    ├── production
     ├── Modul - DPS.kicad_pcb
     ├── Modul - DPS.kicad_pro
     └── Modul - DPS.kicad_sch
