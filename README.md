@@ -78,11 +78,12 @@ Hardware/
     └── Module - DPS.kicad_sch
 Software/
 └── Arduino IDE 2.3.8/          # Firmware source files
-    ├── HAPCAN.ino
-    ├── HAPCAN_NFC.cpp
-    ├── HAPCAN_NFC.h
-    ├── HAPCANProtocol.cpp
-    └── HAPCANProtocol.h
+    └── HAPCAN
+        ├── HAPCAN.ino
+        ├── HAPCAN_NFC.cpp
+        ├── HAPCAN_NFC.h
+        ├── HAPCANProtocol.cpp
+        └── HAPCANProtocol.h
 3D tisk/
 └── Inventor 2026/              # 3D model of the protective enclosure
     ├── Cover - top part.ipt
