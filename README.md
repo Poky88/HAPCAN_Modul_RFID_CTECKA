@@ -84,7 +84,7 @@ Software
         ├── HAPCAN_NFC.h
         ├── HAPCANProtocol.cpp
         └── HAPCANProtocol.h
-3D tisk
+3D printing
 └── Inventor 2026              # 3D model of the protective enclosure
     ├── Cover - top part.ipt
     ├── Cover - assembly.iam
