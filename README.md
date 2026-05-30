@@ -1,95 +1,94 @@
-# Rozšiřující modul HAPCAN - Čtečka NFC tagů
+# HAPCAN Extension Module - NFC Tag Reader
 
-Tento repozitář obsahuje kompletní hardwarové a softwarové podklady pro vývoj a realizaci nového rozšiřujícího modulu do systému domácí automatizace HAPCAN. Modul umožňuje bezkontaktní identifikaci uživatele pomocí technologie RFID a následné řízení výstupních prvků chytré domácnosti přes sběrnici CAN. Projekt vznikl jako součást bakalářské práce.
+This repository contains complete hardware and software resources for the development and implementation of a new extension module for the HAPCAN home automation system. The module enables contactless user identification using RFID technology and subsequent control of smart home output elements via the CAN bus. This project was created as part of a bachelor's thesis.
 
 <p align="center">
-  <img width="40%" alt="DPS - Modul-3D-TOP" src="https://github.com/user-attachments/assets/32bfc24e-4efe-4e4c-bd67-89a0c52af81c" />
+  <img width="40%" alt="PCB - Module-3D-TOP" src="https://github.com/user-attachments/assets/32bfc24e-4efe-4e4c-bd67-89a0c52af81c" />
   <br>
-  <i>Obr. 1: Modul - 3D vizualizace</i>
+  <i>Fig. 1: Module - 3D visualization</i>
 </p>
 
 
-## Funkce modulu
-- <ins>Bezkontaktní ovládání:</ins> Řízení výstupního akčního prvku pomocí RFID technologie
-- <ins>Správa přístupů:</ins> Určování přístupových práv přes oficiální aplikaci HAPCAN Programmer
-- <ins>Univerzální výstup:</ins> Schopnost ovládat libovolný akční člen pracující s napětím 24 V
-- <ins>Snadná instalace:</ins> Umístění v ochranném krytu do elektroinstalační krabice ve zdi
-- <ins>Volba připojení:</ins> Do sběrnice CAN lze modul zapojit pomocí RJ45 nebo šroubovací svorkovnice
-- <ins>Plná kompatibilita:</ins> Zařízení respektuje protokol HAPCAN a dokáže s ním komunikovat
-- <ins>Indikace tagu:</ins> Indikační LED signalizují přiložení tagu
+## Features
+- <ins>Contactless control:</ins> Output actuator control using RFID technology
+- <ins>Access management:</ins> Setting access rights via the official HAPCAN Programmer application
+- <ins>Universal output:</ins> Ability to control any actuator operating at 24 V
+- <ins>Easy installation:</ins> Housed in a protective enclosure for standard in-wall flush-mount electrical boxes
+- <ins>Connection options:</ins> The module can be connected to the CAN bus using an RJ45 connector or a screw terminal block
+- <ins>Full compatibility:</ins> The device respects the HAPCAN protocol and communicates seamlessly with it
+- <ins>Tag indication:</ins> Indicator LEDs signal when a tag is scanned
 
 
 # Hardware
-Schéma zapojení a návrh desky plošných spojů (DPS) byly vytvořeny v programu KiCad. Veškeré zdrojové soubory projektu i kompletní podklady pro výrobu jsou k dispozici v příslušných složkách.
+The schematic design and printed circuit board (PCB) layout were created using KiCad. All project source files and complete manufacturing files are available in the respective folders.
 
 
-| Model DPS - TOP | Model DPS - BOT |
+| PCB Model - TOP | PCB Model - BOT |
 | :---: | :---: |
-| <img width="60%" alt="DPS - JLCPCB - TOP" src="https://github.com/user-attachments/assets/11aba09b-88bc-48cc-9fa7-2b01672ae39d" /> | <img width="60%" alt="DPS - JLCPCB - BOT" src="https://github.com/user-attachments/assets/1573caef-8063-4d5f-86e3-649a53c6a4c2" />|
+| <img width="60%" alt="PCB - JLCPCB - TOP" src="https://github.com/user-attachments/assets/11aba09b-88bc-48cc-9fa7-2b01672ae39d" /> | <img width="60%" alt="PCB - JLCPCB - BOT" src="https://github.com/user-attachments/assets/1573caef-8063-4d5f-86e3-649a53c6a4c2" />|
 <p align="center">
-  <i> Obr. 2: Vizualizace modulu DPS </i>
+  <i> Fig. 2: PCB module visualization </i>
 </p>
   
 
 # Software
 
-Kompletní Firmware byl vyvinut v prostředí Arduino IDE a dělí se na dvě části. Obsluhu NFC čtečky zajišťuje zdrojový soubor Hapcan_NFC.cpp. Komunikaci po sběrnici CAN, konfiguraci modulu a interakci s aplikací Hapcan Programmer, obstarává druhý zdrojový soubor HapcanProtocol.cpp. Oběma částem přísluší hlavičkové soubory pro deklaraci funkcí a import knihoven. Pro pochopení základní logiky programu jsou níže uvedeny vývojové diagramy obou hlavních procesů. Kompletní zdrojové kódy jsou umístěny v přiložené složce.
+The complete firmware was developed in the Arduino IDE environment and is divided into two main parts. The operation of the NFC reader is handled by the `Hapcan_NFC.cpp` source file. CAN bus communication, module configuration, and interaction with the Hapcan Programmer application are managed by the second source file, `HapcanProtocol.cpp`. Both parts include corresponding header files for function declarations and library imports. To help understand the core program logic, flowchart diagrams of both main processes are provided below. The complete source codes are located in the attached folder.
 
 <p align="center">
-  <img width="50%" alt="Hapcan_NFC-vývojový diagram drawio" src="https://github.com/user-attachments/assets/8f330b48-8d9e-4592-b60a-06143c630d38" />
+  <img width="50%" alt="Hapcan_NFC-flowchart drawio" src="https://github.com/user-attachments/assets/8f330b48-8d9e-4592-b60a-06143c630d38" />
   <br>
-  <i>Obr. 3: Vývojový diagram - Obsluha čtečky</i>
+  <i>Fig. 3: Flowchart - NFC Reader Operation</i>
 </p>
 
 
 <p align="center">
-  <img width="50%" alt="HapcanProtocol-vývojový diagram drawio (1)" src="https://github.com/user-attachments/assets/16f24a4d-6b0b-4fc2-9c68-fbed4c1e641f" />
+  <img width="50%" alt="HapcanProtocol-flowchart drawio (1)" src="https://github.com/user-attachments/assets/16f24a4d-6b0b-4fc2-9c68-fbed4c1e641f" />
   <br>
-  <i>Obr. 4: Vývojový diagram - Obsluha protokolu HAPCAN </i>
+  <i>Fig. 4: Flowchart - HAPCAN Protocol Operation</i>
 </p>
 
-# Konstrukce modulu
+# Module Construction
 
-Kompletní modul se umisťuje do navrženého ochranného krytu. Ten plní nejen bezpečnostní funkci, ale zároveň fixuje NFC čtečku v optimální poloze pro spolehlivé načítání tagů. Takto sestavený modul je koncipován pro snadnou montáž do běžné elektroinstalační krabice pod omítku. Detailní postup sestavení a instalace je popsán v přiložené dokumentaci, přičemž 3D modely potřebné pro výrobu krytu jsou součástí elektronických příloh práce. 
+The complete module is housed inside a custom-designed protective enclosure. This case serves not only a protective function but also secures the NFC reader in the optimal position for reliable tag scanning. The fully assembled module is designed for easy mounting into a standard flush-mount in-wall electrical box. A detailed assembly and installation guide is described in the attached documentation, and the 3D models required for manufacturing the enclosure are included in the electronic appendices of the thesis. 
 
-Následující schéma znázorňuje příklad zapojení s využitím elektrického zámku. Pro korektní funkci modulu je nezbytnou podmínkou jeho
-připojení ke sběrnici CAN a propojení s Button modulem.
+The following diagram illustrates an example wiring diagram using an electric lock. For correct operation, the module must be connected to the CAN bus and linked with a Button module.
 
 <p align="center">
-<img width="50%" alt="Typické zapojení modulu" src="https://github.com/user-attachments/assets/699a4f12-1f2b-4a39-83d2-07cffca22f24" />
+<img width="60%" alt="Screenshot 2026-05-30 093349" src="https://github.com/user-attachments/assets/afaede53-46b1-4e0d-a248-b437dd44ca3f" />
   <br>
-  <i>Obr. 5: Typické zapojení</i>
+  <i>Fig. 5: Typical wiring diagram</i>
 </p>
 
 
 <p align="center">
-  <img width="40%" alt="Typické zapojení modulu" src="https://github.com/user-attachments/assets/1b67e641-791f-4e68-b1b6-8cba85b5f1b9" />
+  <img width="40%" alt="Typical module assembly" src="https://github.com/user-attachments/assets/1b67e641-791f-4e68-b1b6-8cba85b5f1b9" />
   <br>
-  <i>Obr. 6: Sestavený modul </i>
+  <i>Fig. 6: Assembled module</i>
 </p>
 
-# Struktura souborů
+# File Structure
 
 <pre>
 Hardware/
-└── KiCad 9.0/                   # Projekty návrhu DPS
+└── KiCad 9.0/                  # PCB design projects
     ├── production
-    ├── Modul - DPS.kicad_pcb
-    ├── Modul - DPS.kicad_pro
-    └── Modul - DPS.kicad_sch
+    ├── Module - DPS.kicad_pcb
+    ├── Module - DPS.kicad_pro
+    └── Module - DPS.kicad_sch
 Software/
-└── Arduino IDE 2.3.8/           # Zdrojové soubory firmwaru
+└── Arduino IDE 2.3.8/          # Firmware source files
     ├── HAPCAN.ino
     ├── HAPCAN_NFC.cpp
     ├── HAPCAN_NFC.h
     ├── HAPCANProtocol.cpp
     └── HAPCANProtocol.h
 3D tisk/
-└── Inventor 2026/               # 3D model ochranného krytu
-    ├── Kryt - horní díl.ipt
-    ├── Kryt - soustava.iam
-    └── Kryt - spodní díl.ipt
+└── Inventor 2026/              # 3D model of the protective enclosure
+    ├── Cover - top part.ipt
+    ├── Cover - assembly.iam
+    └── Cover - bottom.ipt
 
-Dokumentace/                 # PDF dokumentace modulu
-    └── Dokumentace.pdf
+Documentacion/                  # PDF documentation of the module
+    └── Documentation.pdf
 </pre>
