@@ -70,26 +70,26 @@ The following diagram illustrates an example wiring diagram using an electric lo
 # File Structure
 
 <pre>
-Hardware/
-└── KiCad 9.0/                  # PCB design projects
+Hardware
+└── KiCad 9.0                  # PCB design projects
     ├── production
     ├── Module - DPS.kicad_pcb
     ├── Module - DPS.kicad_pro
     └── Module - DPS.kicad_sch
-Software/
-└── Arduino IDE 2.3.8/          # Firmware source files
+Software
+└── Arduino IDE 2.3.8          # Firmware source files
     └── HAPCAN
         ├── HAPCAN.ino
         ├── HAPCAN_NFC.cpp
         ├── HAPCAN_NFC.h
         ├── HAPCANProtocol.cpp
         └── HAPCANProtocol.h
-3D tisk/
-└── Inventor 2026/              # 3D model of the protective enclosure
+3D tisk
+└── Inventor 2026              # 3D model of the protective enclosure
     ├── Cover - top part.ipt
     ├── Cover - assembly.iam
     └── Cover - bottom.ipt
 
-Documentacion/                  # PDF documentation of the module
+Documentacion                  # PDF documentation of the module
     └── Documentation.pdf
 </pre>
